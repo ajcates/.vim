@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/ajcates'
+let g:netrw_dirhist_2='/Users/ajcates/Sites'
+let g:netrw_dirhist_3='/Users/ajcates/Sites/egghead'
+let g:netrw_dirhist_4='/Users/ajcates/Sites/egghead/crad-db'
