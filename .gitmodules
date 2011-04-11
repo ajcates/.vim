@@ -7,3 +7,6 @@
 [submodule "bundle/cmdalias"]
 	path = bundle/cmdalias
 	url = https://github.com/vim-scripts/cmdalias.vim.git
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
