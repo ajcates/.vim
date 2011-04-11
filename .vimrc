@@ -8,6 +8,7 @@ filetype plugin indent on
 "let s:afters = tr(globpath(s:bundles, 'after/'), "\n", ',')
 "let &runtimepath = join([s:bundles, &runtimepath, s:afters], ',')
 
+
 "makes indenting smart
 set autoindent
 set smartindent
