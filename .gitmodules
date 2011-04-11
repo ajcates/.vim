@@ -1,12 +1,12 @@
-[submodule "bundle/fugitive"]
-	path = bundle/fugitive
+[submodule "fugitive"]
+	path = fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "bundle/vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
+[submodule "vim-colors-solarized"]
+	path = vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "bundle/cmdalias"]
-	path = bundle/cmdalias
+[submodule "cmdalias"]
+	path = cmdalias
 	url = https://github.com/vim-scripts/cmdalias.vim.git
-[submodule "bundle/nerdcommenter"]
-	path = bundle/nerdcommenter
+[submodule "nerdcommenter"]
+	path = nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
