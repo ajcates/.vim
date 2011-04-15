@@ -8,6 +8,9 @@ filetype plugin indent on
 "let s:afters = tr(globpath(s:bundles, 'after/'), "\n", ',')
 "let &runtimepath = join([s:bundles, &runtimepath, s:afters], ',')
 
+"allows the cursor to wander anywhere it wants
+set virtualedit=all
+
 
 "makes indenting smart
 set autoindent
@@ -59,6 +62,13 @@ inoremap jj <Esc>
 "make 0 soft bol and ^ a hard bol
 noremap 0 ^
 noremap ^ 0
+
+"swap h and b
+noremap h b
+noremap b h
+noremap l w
+noremap w l
+
 "make - go to the eol and then replace - with _
 map - $
 map _ -
@@ -76,9 +86,10 @@ set encoding=utf-8
 set noexpandtab
 
 " Tab spacing.
-set tabstop=4 
+set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set expandtab
 
 " Use tabs at the start of a line, spaces elsewhere.
 set smarttab 
