@@ -22,8 +22,10 @@ set ruler
 "Set color scheme
 set t_Co=256
 set background=dark
-colorscheme slate
-set transparency=15
+colorscheme solarized
+if has("gui_running")
+    set transparency=15
+endif
 
 "Hide buffers with changes
 set hidden
