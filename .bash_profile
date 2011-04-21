@@ -23,8 +23,13 @@ alias ll='ls -l'
 #lal!
 alias lal='ls -la'
 
+#editor
+export EDITOR=mvim
+
 alias term='open -a Terminal.app'
 #projects
 export pCancer='/Users/ajcates/Sites/wsn/cancerKungFu'
 export pSB='/Users/ajcates/Sites/projects/sweet-boilerplate'
 export pSweetOps='/Users/ajcates/Sites/egghead/sweet-ops'
+export pHolsterData='/Users/ajcates/Sites/egghead/USAHolsters/holster-data'
+export pSeaStinger='/Users/ajcates/Sites/egghead/seastinger.eggheadventures.com/'

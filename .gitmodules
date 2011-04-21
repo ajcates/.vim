@@ -16,3 +16,21 @@
 [submodule "bundle/color-sampler-pack"]
 	path = bundle/color-sampler-pack
 	url = https://github.com/vim-scripts/Color-Sampler-Pack.git
+[submodule "bundle/vim-less"]
+	path = bundle/vim-less
+	url = https://github.com/itspriddle/vim-lesscss.git
+[submodule "bundle/autocomp"]
+	path = bundle/autocomp
+	url = https://github.com/andre-luiz-dos-santos/autocomp.git
+[submodule "bundle/word_complete"]
+	path = bundle/word_complete
+	url = https://github.com/vim-scripts/word_complete.vim
+[submodule "bundle/autocomplpop"]
+	path = bundle/autocomplpop
+	url = https://github.com/vim-scripts/AutoComplPop
+[submodule "bundle/vim-project"]
+	path = bundle/vim-project
+	url = https://github.com/shemerey/vim-project.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git

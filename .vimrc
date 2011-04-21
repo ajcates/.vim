@@ -8,9 +8,14 @@ filetype plugin indent on
 "let s:afters = tr(globpath(s:bundles, 'after/'), "\n", ',')
 "let &runtimepath = join([s:bundles, &runtimepath, s:afters], ',')
 
+"turn on autocomplete:
+set ofu=syntaxcomplete#Complete
 "allows the cursor to wander anywhere it wants
 set virtualedit=all
 
+"make php files php/HTML
+au BufRead *.php set ft=php.html
+au BufNewFile *.php set ft=php.html
 
 "makes indenting smart
 set autoindent
@@ -23,9 +28,9 @@ set ruler
 set t_Co=256
 set background=dark
 colorscheme solarized
-if has("gui_running")
-    set transparency=15
-endif
+
+"Highlight current line
+se cul
 
 "Hide buffers with changes
 set hidden
