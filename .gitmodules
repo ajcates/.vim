@@ -19,12 +19,6 @@
 [submodule "bundle/vim-less"]
 	path = bundle/vim-less
 	url = https://github.com/itspriddle/vim-lesscss.git
-[submodule "bundle/autocomp"]
-	path = bundle/autocomp
-	url = https://github.com/vim-scripts/autocomp.vim.git
-[submodule "bundle/word_complete"]
-	path = bundle/word_complete
-	url = https://github.com/vim-scripts/word_complete.vim
 [submodule "bundle/autocomplpop"]
 	path = bundle/autocomplpop
 	url = https://github.com/vim-scripts/AutoComplPop
