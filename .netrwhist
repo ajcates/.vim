@@ -1,8 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/ajcates'
 let g:netrw_dirhist_2='/Users/ajcates/Sites'
 let g:netrw_dirhist_3='/Users/ajcates/Sites/egghead'
 let g:netrw_dirhist_4='/Users/ajcates/Sites/egghead/crad-db'
 let g:netrw_dirhist_5='/Users/ajcates/Sites/egghead/sweet-ops'
 let g:netrw_dirhist_6='/Users/ajcates/.vim'
+let g:netrw_dirhist_7='/Applications/MNPP/conf/nginx'
+let g:netrw_dirhist_8='/Users/ajcates/Sites/egghead/crad-db/resources/scripts/fuel'
+let g:netrw_dirhist_9='/Users/ajcates/Sites/egghead/crad-db'

@@ -7,6 +7,9 @@ syntax on
 filetype plugin indent on
 "let s:afters = tr(globpath(s:bundles, 'after/'), "\n", ',')
 "let &runtimepath = join([s:bundles, &runtimepath, s:afters], ',')
+"
+"Font size
+set guifont=Menlo:h11
 
 "turn on autocomplete:
 set ofu=syntaxcomplete#Complete
@@ -106,3 +109,14 @@ set shell=/bin/bash\ -li
 
 "set mapleader
 let mapleader = ","
+
+"Set up keyboard shortcut for bClose
+nmap <C-D><C-D> <Plug>Kwbd
+
+"Set up keyboard short cut for quick file finding
+nmap <C-F><C-F> :CommandT<CR>
+
+"Set up a quick Last fiLe
+nmap <C-L><C-L> :b#<CR>
+
+let g:CommandTMaxHeight = 35
