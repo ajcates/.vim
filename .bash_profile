@@ -10,7 +10,7 @@ alias p='php'
 
 #show directories whenver we change
 cdl() {
-	cd $1; ls
+	cd "$*"; ls
 }
 alias cd='cdl'
 
@@ -34,3 +34,4 @@ export pSweetOps='/Users/ajcates/Sites/egghead/sweet-ops'
 export pHolsterData='/Users/ajcates/Sites/egghead/USAHolsters/holster-data'
 export pSeaStinger='/Users/ajcates/Sites/egghead/seastinger.eggheadventures.com/'
 export pCrad='/Users/ajcates/Sites/egghead/crad-db/'
+export pFeedSync='/Users/ajcates/Sites/egghead/feed-sync/'

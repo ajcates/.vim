@@ -69,6 +69,7 @@ set number
 
 " This is totally awesome - remap jj to escape in insert mode.  You'll never type jj anyway, so it's great!
 inoremap jj <Esc>
+inoremap <C-L> <Esc>
 "make 0 soft bol and ^ a hard bol
 noremap 0 ^
 noremap ^ 0
@@ -116,7 +117,16 @@ nmap <C-D><C-D> <Plug>Kwbd
 "Set up keyboard short cut for quick file finding
 nmap <C-F><C-F> :CommandT<CR>
 
+"Set up keyboard short cut for quick buffer finding
+nmap <C-K><C-K> :CommandTBuffer<CR>
+"
+"Set up keyboard short cut for quick brace matching
+nmap gm %
+
 "Set up a quick Last fiLe
 nmap <C-L><C-L> :b#<CR>
 
 let g:CommandTMaxHeight = 35
+
+"auto complie less files
+autocmd BufWritePost,FileWritePost *.less silent !lessc <afile> <afile>:r.css
