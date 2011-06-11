@@ -24,7 +24,7 @@ alias ll='ls -l'
 alias lal='ls -la'
 
 #editor
-export EDITOR=mvim
+export EDITOR=vi
 
 alias term='open -a Terminal.app'
 #projects
