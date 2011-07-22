@@ -1,4 +1,5 @@
 
+PS1='\n-~-=-~-=-~-=-~-\n\u@\h/\w\n:'
 #Set g as git
 alias g='git'
 
@@ -25,6 +26,10 @@ alias lal='ls -la'
 
 #editor
 export EDITOR=vi
+
+#shh short cuts
+alias donkey='ssh ajcates@dev.eggheadventures.com'
+alias websiteninjas='ssh ajcates@websiteninjas.com'
 
 alias term='open -a Terminal.app'
 #projects

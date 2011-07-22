@@ -11,8 +11,17 @@ filetype plugin indent on
 "Font size
 set guifont=Menlo:h11
 
+let g:SimplenoteUsername = "aj@ajcates.com"
+let g:SimplenotePassword = "dworkram"
+
+
+"Better less annoyning backups
+set backupdir=~/.vim/tmp/
+set directory=~/.vim/tmp/
+
 "turn on autocomplete:
 set ofu=syntaxcomplete#Complete
+
 "allows the cursor to wander anywhere it wants
 set virtualedit=all
 
@@ -20,9 +29,6 @@ set virtualedit=all
 au BufRead *.php set ft=php.html
 au BufNewFile *.php set ft=php.html
 
-"makes indenting smart
-set autoindent
-set smartindent
 
 "adds a bar that tells you where your cursor is
 set ruler
@@ -33,12 +39,15 @@ set background=dark
 colorscheme solarized
 
 "Highlight current line
-se cul
+set cul
 
 "Hide buffers with changes
 set hidden
 
-"Have 3 lines of offset (or buffer) when scrolling
+"Set no wrap
+set nowrap
+
+"Have 5 lines of offset when scrolling
 set scrolloff=5
 
 "Hide the toolbar
@@ -77,6 +86,7 @@ noremap ^ 0
 "swap h and b
 noremap h b
 noremap b h
+"swap l and w
 noremap l w
 noremap w l
 
@@ -97,10 +107,13 @@ set encoding=utf-8
 set noexpandtab
 
 " Tab spacing.
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
+"makes indenting smart
+set autoindent
+set smartindent
 
 " Use tabs at the start of a line, spaces elsewhere.
 set smarttab 
@@ -122,6 +135,7 @@ nmap <C-K><C-K> :CommandTBuffer<CR>
 "
 "Set up keyboard short cut for quick brace matching
 nmap gm %
+vmap gm %
 
 "Set up a quick Last fiLe
 nmap <C-L><C-L> :b#<CR>
@@ -130,3 +144,4 @@ let g:CommandTMaxHeight = 35
 
 "auto complie less files
 autocmd BufWritePost,FileWritePost *.less silent !lessc <afile> <afile>:r.css
+

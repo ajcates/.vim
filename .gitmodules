@@ -37,3 +37,9 @@
 [submodule "bundle/vim-coffee-script"]
 	path = bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/csv"]
+	path = bundle/csv
+	url = https://github.com/chrisbra/csv.vim.git
+[submodule "bundle/simplenote"]
+	path = bundle/simplenote
+	url = git://github.com/mrtazz/simplenote.vim.git

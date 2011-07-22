@@ -1,5 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/ajcates/Sites/egghead/USAHolsters/holster-data'
-let g:netrw_dirhist_2='/Users/ajcates/Sites/egghead/feed-sync'
-let g:netrw_dirhist_3='/Users/ajcates/Scripts'
+let g:netrw_dirhist_cnt =0
