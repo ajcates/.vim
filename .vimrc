@@ -36,7 +36,7 @@ set ruler
 "Set color scheme
 set t_Co=256
 set background=dark
-colorscheme solarized
+colorscheme Rdark
 
 "Highlight current line
 set cul
@@ -45,13 +45,15 @@ set cul
 set hidden
 
 "Set no wrap
-set nowrap
+"set nowrap
 
 "Have 5 lines of offset when scrolling
 set scrolloff=5
 
 "Hide the toolbar
 set guioptions-=T
+set guioptions-=r
+set guioptions-=L
 
 "turn annoyning beeps into screen flashes
 set vb t_vb=

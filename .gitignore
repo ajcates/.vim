@@ -1,6 +1,8 @@
 *.swp
+*.swn
+*.swo
 *.orig
+tmp/*
 .DS_Store
 ehthumbs.db
 Thumbs.db
-
