@@ -11,9 +11,6 @@ filetype plugin indent on
 "Font size
 set guifont=Menlo:h11
 
-let g:SimplenoteUsername = "aj@ajcates.com"
-let g:SimplenotePassword = "dworkram"
-
 
 "Better less annoyning backups
 set backupdir=~/.vim/tmp/
