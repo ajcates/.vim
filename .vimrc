@@ -8,8 +8,20 @@ filetype plugin indent on
 "let s:afters = tr(globpath(s:bundles, 'after/'), "\n", ',')
 "let &runtimepath = join([s:bundles, &runtimepath, s:afters], ',')
 "
-"Font size
-set guifont=Menlo:h11
+
+if has("gui_running")
+  "Font size
+  set guifont=Menlo:h11
+  "save when focus is lost
+  au FocusLost * :silent! wall                 " Save on FocusLost
+  au FocusLost * call feedkeys("\<C-\>\<C-n>") " Return to normal mode on FocustLost
+  "Make bg transparent
+  set transparency=7
+  "Hide the toolbar
+  set guioptions-=T
+  set guioptions-=r
+  set guioptions-=L
+endif
 
 
 "Better less annoyning backups
@@ -33,7 +45,7 @@ set ruler
 "Set color scheme
 set t_Co=256
 set background=dark
-colorscheme Rdark
+colorscheme ajcates
 
 "Highlight current line
 set cul
@@ -47,10 +59,6 @@ set hidden
 "Have 5 lines of offset when scrolling
 set scrolloff=5
 
-"Hide the toolbar
-set guioptions-=T
-set guioptions-=r
-set guioptions-=L
 
 "turn annoyning beeps into screen flashes
 set vb t_vb=
@@ -88,6 +96,10 @@ noremap b h
 "swap l and w
 noremap l w
 noremap w l
+
+"Make M match braces
+noremap % M
+noremap M %
 
 "make - go to the eol and then replace - with _
 map - $
@@ -141,6 +153,23 @@ nmap <C-L><C-L> :b#<CR>
 
 let g:CommandTMaxHeight = 35
 
+
+"Reselect visual block after indent/outden
+vnoremap < <gv
+vnoremap > >gv
+
+
+"force save root file perms
+cmap w!! %!sudo tee > /dev/null %
+
+
+
+
+"autocmd BufWritePost,FileWritePost *.coffee silent !coffee -c ../hmm<afile>
+"au BufWritePost *.coffee silent CoffeeMake! cwindow | redraw!
+au BufWritePost *.coffee silent CoffeeMake!
+
+
 "auto complie less files
-autocmd BufWritePost,FileWritePost *.less silent !lessc <afile> <afile>:r.css
+autocmd BufWritePost,FileWritePost *.less silent !lessc <afile> ../<afile>:r.css
 

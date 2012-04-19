@@ -43,3 +43,9 @@
 [submodule "bundle/simplenote"]
 	path = bundle/simplenote
 	url = git://github.com/mrtazz/simplenote.vim.git
+[submodule "bundle/vim-css-color"]
+	path = bundle/vim-css-color
+	url = https://github.com/skammer/vim-css-color.git
+[submodule "bundle/vim-csscolor"]
+	path = bundle/vim-csscolor
+	url = https://github.com/skammer/vim-css-color.git

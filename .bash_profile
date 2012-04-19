@@ -1,5 +1,5 @@
 export CLICOLOR=1
-export PS1='\n-~-=-~-=-~-=-~-\n\u@\h/\w\n:'
+#export PS1='\n-~-=-~-=-~-=-~-\n\u@\h/\w\n:'
 
 #Set g as git
 alias g='git'
@@ -9,6 +9,12 @@ alias v='mvim'
 
 #Set p as php
 alias p='php'
+
+#Set n as node
+alias n='node'
+
+#Set c as coffescript
+alias n='coffescript'
 
 #show directories whenver we change
 cdl() {
@@ -101,19 +107,44 @@ ql () {
 }
 
 
+tweet() {
+  twitter -status=<<Tweet
+  $1
+Tweet
+}
 
-#editor
-export EDITOR=mate
 
-PATH=$PATH:~/.bin/:/usr/local/mysql/bin
-export PATH
 
 #shh short cuts
 alias donkey='ssh ajcates@dev.eggheadventures.com'
 alias websiteninjas='ssh ajcates@websiteninjas.com'
 
-alias term='open -a Terminal.app'
-#projects
+#alias term='open -a Terminal.app'
+# open a new tab on Terminal with the current working dir
+function newtab {
+	osascript -s o <<AppleScript
+    tell application "Terminal"
+      activate
+      tell application "System Events"
+        keystroke "t" using {command down}
+      end tell
+      do script "$1" in selected tab of front window
+    end tell
+AppleScript
+}
+
+alias term='newtab'
+
+//Opens up a project for us
+function project {
+  term "cd $1"
+  open $1
+  mvim $1
+}
+
+#projects and other book marks
+export pAjcates='/Users/ajcates/Sites/projects/ajcates.local'
+export pProjects='/Users/ajcates/Sites/projects'
 export pCancer='/Users/ajcates/Sites/wsn/cancerKungFu'
 export pSB='/Users/ajcates/Sites/projects/sweet-boilerplate'
 export pWikiWaka='/Users/ajcates/Sites/projects/wiki-waka'
@@ -122,3 +153,13 @@ export pHolsterData='/Users/ajcates/Sites/egghead/USAHolsters/holster-data'
 export pSeaStinger='/Users/ajcates/Sites/egghead/seastinger.eggheadventures.com/'
 export pCrad='/Users/ajcates/Sites/egghead/crad-db/'
 export pFeedSync='/Users/ajcates/Sites/egghead/feed-sync/'
+export pScripts='/Users/ajcates/Scripts/'
+export pDownloads='/Users/ajcates/Downloads/'
+
+##
+# Your previous /Users/ajcates/.bash_profile file was backed up as /Users/ajcates/.bash_profile.macports-saved_2012-02-24_at_20:24:26
+##
+
+export PATH=~/.bin/:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:$PATH
+#editor
+export EDITOR=mvim

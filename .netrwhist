@@ -1,6 +1,6 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/ajcates/Sites/projects/siconeclothing.com'
-let g:netrw_dirhist_2='/Users/ajcates/Sites/projects/sweet-boilerplate'
-let g:netrw_dirhist_3='/Users/ajcates/Sites/projects/kisnerlandscape.com'
-let g:netrw_dirhist_4='/Users/ajcates/Sites/work/than-wolfcms'
+let g:netrw_dirhist_1='/Users/ajcates/Sites/projects/ajcates.local'
+let g:netrw_dirhist_2='/Users/ajcates/Sites/egghead/crad-db'
+let g:netrw_dirhist_3='/Users/ajcates/Downloads'
+let g:netrw_dirhist_4='/Users/ajcates/Sites/projects/ajcates.local'
