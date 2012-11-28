@@ -7,3 +7,4 @@ tmp/*
 .netrwhist
 ehthumbs.db
 Thumbs.db
+/doc/*
