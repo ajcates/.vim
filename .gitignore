@@ -4,5 +4,6 @@
 *.orig
 tmp/*
 .DS_Store
+.netrwhist
 ehthumbs.db
 Thumbs.db
