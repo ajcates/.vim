@@ -18,7 +18,7 @@
 	url = https://github.com/vim-scripts/Color-Sampler-Pack.git
 [submodule "bundle/vim-less"]
 	path = bundle/vim-less
-	url = https://github.com/itspriddle/vim-lesscss.git
+	url = https://github.com/groenewege/vim-less.git
 [submodule "bundle/autocomplpop"]
 	path = bundle/autocomplpop
 	url = https://github.com/vim-scripts/AutoComplPop
@@ -40,12 +40,15 @@
 [submodule "bundle/csv"]
 	path = bundle/csv
 	url = https://github.com/chrisbra/csv.vim.git
-[submodule "bundle/simplenote"]
-	path = bundle/simplenote
-	url = git://github.com/mrtazz/simplenote.vim.git
+;[submodule "bundle/simplenote"]
+	;path = bundle/simplenote
+	;url = git://github.com/mrtazz/simplenote.vim.git
 [submodule "bundle/vim-css-color"]
 	path = bundle/vim-css-color
 	url = https://github.com/skammer/vim-css-color.git
 [submodule "bundle/vim-csscolor"]
 	path = bundle/vim-csscolor
 	url = https://github.com/skammer/vim-css-color.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = git://github.com/majutsushi/tagbar
