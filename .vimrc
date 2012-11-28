@@ -86,6 +86,7 @@ set number
 " This is totally awesome - remap jj to escape in insert mode.  You'll never type jj anyway, so it's great!
 inoremap jj <Esc>
 inoremap <C-L> <Esc>
+
 "make 0 soft bol and ^ a hard bol
 noremap 0 ^
 noremap ^ 0
@@ -166,7 +167,15 @@ vnoremap > >gv
 "force save root file perms
 cmap w!! %!sudo tee > /dev/null %
 
+"let phpctags-tag bar know where phpctags is
+let g:tagbar_phpctags_bin='~/.vim/bundle/phpctags/phpctags'
 
+function! Toggler()
+  execute 'TagbarToggle'
+  execute 'NERDTreeToggle'
+endfunction
+
+command! -nargs=0 InfoToggler call Toggler()
 
 
 "autocmd BufWritePost,FileWritePost *.coffee silent !coffee -c ../hmm<afile>
