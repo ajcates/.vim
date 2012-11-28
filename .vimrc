@@ -143,6 +143,10 @@ nmap <C-F><C-F> :CommandT<CR>
 
 "Set up keyboard short cut for quick buffer finding
 nmap <C-K><C-K> :CommandTBuffer<CR>
+
+"let crtl-e be the same as crtl-w
+nmap <C-E> <C-W>
+
 "
 "Set up keyboard short cut for quick brace matching
 nmap gm %
