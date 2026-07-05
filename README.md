@@ -26,15 +26,17 @@ cd ~/.vim
 
 ## What does the setup script do?
 
-1. Installs `git`, `curl`, and `zsh` where supported
+1. Installs `git`, `curl`, `zsh`, and `neovim` where supported
 2. Clones this repository to `~/.vim` if it is not already there
 3. Initializes and updates all git submodules
-4. Installs Oh My Zsh non-interactively
-5. Creates symlinks:
+4. Sets up Neovim to reuse the same config via `~/.config/nvim/init.lua`
+5. Installs Oh My Zsh non-interactively
+6. Creates symlinks:
    - `~/.vimrc` → `~/.vim/.vimrc`
    - `~/.bash_profile` → `~/.vim/.bash_profile`
    - `~/.zshrc` → `~/.vim/.zshrc`
-6. Backs up any existing files with `.backup` extension
+   - `~/.tmux.conf` → `~/.vim/.tmux.conf`
+7. Backs up any existing files with `.backup` extension
 
 Supported package environments:
 
@@ -42,7 +44,7 @@ Supported package environments:
 - Termux
 - Windows shells with MSYS2 `pacman`, Chocolatey, Scoop, or winget available
 
-On Windows, native `zsh` availability depends on the shell distribution. If the script cannot install it automatically, install `git`, `curl`, and `zsh`, then run the script again.
+On Windows, native `zsh` availability depends on the shell distribution. If the script cannot install it automatically, install `git`, `curl`, `zsh`, and `neovim`, then run the script again.
 
 ## Manual Setup
 
@@ -60,10 +62,13 @@ git submodule update --init --recursive
 ln -s ~/.vim/.vimrc ~/.vimrc
 ln -s ~/.vim/.bash_profile ~/.bash_profile
 ln -s ~/.vim/.zshrc ~/.zshrc
+ln -s ~/.vim/.tmux.conf ~/.tmux.conf
+mkdir -p ~/.config/nvim
+ln -s ~/.vim/nvim/init.lua ~/.config/nvim/init.lua
 
 # Install zsh and Oh My Zsh
 # Debian/Ubuntu:
-sudo apt-get install -y zsh curl git
+sudo apt-get install -y zsh curl git neovim
 RUNZSH=no CHSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Source the bash profile or start zsh
@@ -76,6 +81,7 @@ zsh
 - `.vimrc` - Vim configuration
 - `.bash_profile` - Bash profile configuration
 - `.zshrc` - Zsh and Oh My Zsh configuration
+- `.tmux.conf` - tmux configuration with mouse scrolling enabled
 - `bundle/` - Vim plugins as git submodules
 - `colors/` - Vim color schemes
 - `autoload/` - Vim autoload scripts

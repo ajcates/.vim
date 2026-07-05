@@ -17,6 +17,7 @@ NC='\033[0m' # No Color
 REPO_URL="https://github.com/ajcates/.vim.git"
 REPO_DIR="$HOME/.vim"
 OMZ_DIR="$HOME/.oh-my-zsh"
+NVIM_DIR="$HOME/.config/nvim"
 
 info() {
     echo -e "${BLUE}$*${NC}"
@@ -83,33 +84,36 @@ detect_platform() {
 install_deps_debian() {
     success "Installing dependencies with apt..."
     run_with_sudo apt-get update
-    run_with_sudo apt-get install -y git curl zsh
+    run_with_sudo apt-get install -y git curl zsh neovim
 }
 
 install_deps_termux() {
     success "Installing dependencies with pkg..."
     pkg update -y
-    pkg install -y git curl zsh
+    pkg install -y git curl zsh neovim
 }
 
 install_deps_windows_msys() {
     if command_exists pacman; then
         success "Installing dependencies with pacman..."
-        pacman -Sy --needed --noconfirm git curl zsh
+        pacman -Sy --needed --noconfirm git curl zsh neovim
     elif command_exists choco; then
         success "Installing available dependencies with Chocolatey..."
         choco install -y git curl || warn "Chocolatey could not install git and curl automatically."
         choco install -y zsh || warn "Chocolatey could not install zsh automatically."
+        choco install -y neovim || warn "Chocolatey could not install neovim automatically."
     elif command_exists scoop; then
         success "Installing available dependencies with Scoop..."
         scoop install git curl || warn "Scoop could not install git and curl automatically."
         scoop install zsh || warn "Scoop could not install zsh automatically."
+        scoop install neovim || warn "Scoop could not install neovim automatically."
     elif command_exists winget; then
         warn "winget is available, but zsh support depends on your Windows shell distribution."
         winget install --id Git.Git --accept-package-agreements --accept-source-agreements || warn "winget could not install Git automatically."
+        winget install --id Neovim.Neovim --accept-package-agreements --accept-source-agreements || warn "winget could not install Neovim automatically."
     else
         warn "No supported Windows package manager found."
-        warn "Install git, curl, and zsh manually, then re-run this script."
+        warn "Install git, curl, zsh, and neovim manually, then re-run this script."
     fi
 }
 
@@ -168,6 +172,11 @@ link_file() {
         warn "Symlink failed for $dest; copying file instead"
         cp "$src" "$dest"
     fi
+}
+
+setup_neovim() {
+    mkdir -p "$NVIM_DIR"
+    link_file "$REPO_DIR/nvim/init.lua" "$NVIM_DIR/init.lua"
 }
 
 install_oh_my_zsh() {
@@ -254,6 +263,8 @@ success "Creating symlinks..."
 link_file "$REPO_DIR/.vimrc" "$HOME/.vimrc"
 link_file "$REPO_DIR/.bash_profile" "$HOME/.bash_profile"
 link_file "$REPO_DIR/.zshrc" "$HOME/.zshrc"
+link_file "$REPO_DIR/.tmux.conf" "$HOME/.tmux.conf"
+setup_neovim
 
 install_oh_my_zsh
 set_default_shell
